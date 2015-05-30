@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2015 8:31:27 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="empdep.domain.Department" table="Department" catalog="my_sql_connection" optimistic-lock="version">
+        <id name="departmentId" type="java.lang.Integer">
+            <column name="department_id" />
+            <generator class="identity" />
+        </id>
+        <property name="departmentName" type="string">
+            <column name="department_name" length="100" not-null="true">
+                <comment>&#208;&#157;&#208;&#176;&#208;&#183;&#208;&#178;&#208;&#176;&#208;&#189;&#208;&#184;&#208;&#181;
+                &#208;&#190;&#209;&#130;&#208;&#180;&#208;&#181;&#208;&#187;&#208;&#176;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

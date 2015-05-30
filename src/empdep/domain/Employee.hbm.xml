@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 10, 2015 9:24:47 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="my_sql_connection" name="empdep.domain.Employee" optimistic-lock="version" table="Employee">
+    <id name="employeeId" type="java.lang.Integer">
+      <column name="employee_id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="employeeFirstName" type="string">
+      <column length="100" name="employee_first_name" not-null="true">
+        <comment>ÐÐ¼Ñ
+                ÑÐ¾ÑÑÑÐ´Ð½Ð¸ÐºÐ°</comment>
+      </column>
+    </property>
+    <property name="employeeLastName" type="string">
+      <column length="100" name="employee_last_name" not-null="true">
+        <comment>Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ
+                ÑÐ¾ÑÑÑÐ´Ð½Ð¸ÐºÐ°</comment>
+      </column>
+    </property>
+    <property name="employeeLogin" type="string">
+      <column length="100" name="employee_login" not-null="true">
+        <comment>ÐÐ¾Ð³Ð¸Ð½
+                Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ñ</comment>
+      </column>
+    </property>
+    <property name="employeePassword" type="string">
+      <column length="100" name="employee_password" not-null="true">
+        <comment>ÐÐ°ÑÐ¾Ð»Ñ
+                Ð¿Ð¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»Ñ</comment>
+      </column>
+    </property>
+    <property name="employeeEmail" type="string">
+      <column length="129" name="employee_email" not-null="true">
+        <comment>E-mail ÑÐ¾ÑÑÑÐ´Ð½Ð¸ÐºÐ°</comment>
+      </column>
+    </property>
+    <property name="departmentId" type="int">
+      <column name="department_id" not-null="true">
+        <comment>ÐÐ¾Ð´ Ð¾ÑÐ´ÐµÐ»Ð°
+                ÑÐ¾ÑÑÑÐ´Ð½Ð¸ÐºÐ°</comment>
+      </column>
+    </property>
+    <property name="employeePhone" type="string">
+      <column length="200" name="employee_phone">
+        <comment>Ð¢ÐµÐ»ÐµÑÐ¾Ð½
+                ÑÐ¾ÑÑÑÐ´Ð½Ð¸ÐºÐ°</comment>
+      </column>
+    </property>
+    <property name="employeePosition" type="string">
+      <column length="200" name="employee_position">
+        <comment>ÐÐ¾Ð»Ð¶Ð½Ð¾ÑÑÑ
+                ÑÐ¾ÑÑÑÐ´Ð½Ð¸ÐºÐ°</comment>
+      </column>
+    </property>
+  </class>
+</hibernate-mapping>
